@@ -100,6 +100,10 @@
 
  ***/
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
   font-size: 15px;
   color: #7f8a99;
@@ -175,8 +179,8 @@ button {
 }
 
 textarea {
-  overflow: hidden;
-  resize: none;
+  /* overflow: hidden; */
+  /* resize: none; */
 }
 
 button {
@@ -2608,10 +2612,12 @@ img.lazy-image.loaded {
   transition: all 300ms ease;
 }
 
+
+
 .default-form .form-group textarea {
   height: 120px;
   padding-top: 12px;
-  resize: none;
+  /* resize: none; */
 }
 
 .default-form .form-group input[type="text"]:focus,
@@ -2627,6 +2633,8 @@ img.lazy-image.loaded {
 .form-group .ui-selectmenu-button.ui-button:active {
   border-color: #d5ae82;
 }
+
+
 
 .default-form ::-webkit-input-placeholder {
   color: #aaaaaa;
@@ -3878,7 +3886,7 @@ img.lazy-image.loaded {
   margin-bottom: 25px;
 }
 
-.about-section .left-col .lower-content .text:first-letter {
+.firstLetterCapital:first-letter{
   color: #061138;
   float: left;
   font-family: "Playfair Display", serif;
@@ -3886,6 +3894,15 @@ img.lazy-image.loaded {
   line-height: 0.8em;
   margin: 0px 10px 5px 0px;
 }
+
+/* .about-section .left-col .lower-content .text:first-letter {
+  color: #061138;
+  float: left;
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  line-height: 0.8em;
+  margin: 0px 10px 5px 0px;
+} */
 
 .default-link {
   position: relative;
@@ -3974,8 +3991,12 @@ img.lazy-image.loaded {
 
 .services-section {
   position: relative;
-  padding: 0px 0px 90px;
+  padding: 0px 0px 0;
   z-index: 2;
+}
+
+.events-section{
+  padding-bottom: 90px;
 }
 
 .services-section .title-box {
@@ -4010,6 +4031,10 @@ img.lazy-image.loaded {
   height: 100%;
   background: #061138;
   opacity: 0.9;
+}
+
+.events-section .title-box .image-layer:before{
+  background: none;
 }
 
 .service-block {
@@ -4097,8 +4122,8 @@ img.lazy-image.loaded {
   position: relative;
   display: block;
   background: #ffffff;
-  padding: 35px 40px;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 15px 30px;
+  /* border-bottom: 1px solid #e5e5e5; */
   border-radius: 0px 0px 3px 3px;
   z-index: 1;
 }
@@ -4205,6 +4230,21 @@ img.lazy-image.loaded {
 /*** 
 
 ====================================================================
+	Form Section
+====================================================================
+
+***/
+
+.form-section {
+  position: relative;
+  padding: 90px 0px;
+}
+
+
+
+/*** 
+
+====================================================================
 	Activities Section
 ====================================================================
 
@@ -4258,7 +4298,7 @@ img.lazy-image.loaded {
   max-width: 980px;
   margin: 0 auto;
   background: #ffffff;
-  padding-left: 270px;
+  padding-left: 350px;
   min-height: 300px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);
 }
@@ -4267,7 +4307,7 @@ img.lazy-image.loaded {
   position: absolute;
   left: 0;
   top: 0;
-  width: 270px;
+  width: 350px;
   height: 300px;
   overflow: hidden;
 }
@@ -4275,7 +4315,7 @@ img.lazy-image.loaded {
 .activity-block .image-box img {
   display: block;
   width: 100%;
-  height: 300px;
+  height: 100%;
 }
 
 .activity-block .image-box .offer-info {
@@ -4415,7 +4455,7 @@ img.lazy-image.loaded {
 
 .activity-block .links-box {
   position: relative;
-  margin-top: 45px;
+  margin-top: 25px;
 }
 
 .activity-block .links-box .link {
@@ -6322,10 +6362,10 @@ img.lazy-image.loaded {
 
 .booking-form .form-group .ui-selectmenu-button.ui-button {
   background: none;
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: #e5e5e5; 
   color: #868da5;
   font-size: 13px;
-  padding-left: 45px;
+  padding: 10px 25px;
   text-transform: uppercase;
 }
 
@@ -13704,6 +13744,11 @@ img.lazy-image.loaded {
   width: 100%;
 }
 
+.ui-selectmenu-open{
+  max-height: 275px;
+  overflow-y: scroll;
+}
+
 .choose-destination .lower-row {
   position: relative;
   display: block;
@@ -13769,10 +13814,12 @@ img.lazy-image.loaded {
 .service-block-two .lower-box {
   position: relative;
   display: block;
-  padding: 95px 20px 30px;
+  padding: 155px 20px 30px;
   border-top: none;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+
 
 .service-block-two .title-box {
   position: absolute;
